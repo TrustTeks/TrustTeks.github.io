@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustTeks | Leading Semiconductor IC Design Services</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         /* 基礎變數與重設 */
         :root {
@@ -40,19 +40,6 @@
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-red);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo span {
-            color: var(--tech-gray);
         }
 
         nav ul {
@@ -102,7 +89,9 @@
             opacity: 0.9;
         }
 
+        /* 按鈕樣式 */
         .btn {
+            display: inline-block;
             padding: 12px 30px;
             background: var(--primary-red);
             color: var(--white);
@@ -110,11 +99,21 @@
             border-radius: 5px;
             font-weight: bold;
             transition: var(--transition);
+            margin-bottom: 10px;
+            min-width: 250px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
             background: #b3050e;
             transform: translateY(-3px);
+            color: var(--white);
+        }
+
+        .btn i {
+            margin-right: 10px;
         }
 
         /* 通用區塊樣式 */
@@ -209,6 +208,13 @@
         .contact-info i {
             color: var(--primary-red);
             font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
         }
 
         /* 頁尾 */
@@ -226,6 +232,7 @@
             .hero h1 { font-size: 2.5rem; }
             .about-content { flex-direction: column; }
             .contact-container { flex-direction: column; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
@@ -244,7 +251,7 @@
     <section id="home" class="hero">
         <h1>Engineering the Future of Silicon</h1>
         <p>Premium Semiconductor IC Design Services. Expertly crafted in Taiwan, serving the Global Innovation Hubs in the USA.</p>
-        <a href="#contact" class="btn">Partner With Us</a>
+        <a href="#contact" class="btn" style="min-width: auto;">Partner With Us</a>
     </section>
 
     <section id="about">
@@ -283,7 +290,7 @@
                 <p>Advanced design services focusing on power, performance, and area (PPA) optimization.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-shield-halved"></i>
                 <h3>Verification</h3>
                 <p>Rigorous verification methodologies to ensure first-pass silicon success for complex SOCs.</p>
             </div>
@@ -303,9 +310,9 @@
                     <i class="fas fa-envelope"></i>
                     <span>trustteks_yt@trustteks.com</span>
                 </div>
-                <div class="contact-item">
+                <div>
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+88635752096">+886-3-5752096</a>
+                    <span>+886-3-5752096</span>
                 </div>
                 <div>
                     <i class="fas fa-globe"></i>
@@ -316,10 +323,22 @@
                     <span>7F-1. No. 120, Sec. 2, Gongdao 5th Rd., East Dist., Hsinchu City 300, Taiwan</span>
                 </div>
             </div>
-            <div style="flex: 1;">
-                <p>Connect with us on LinkedIn for the latest updates and industry insights.</p>
-                <br>
-                <a href="https://tw.linkedin.com/company/trustteks" class="btn" target="_blank">View LinkedIn Profile</a>
+            
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                <h3>Connect & Careers</h3>
+                <p style="margin-bottom: 20px;">Stay updated with our latest news and join our growing team.</p>
+                
+                <a href="https://tw.linkedin.com/company/trustteks" class="btn" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                
+                <a href="https://www.104.com.tw/company/1a2x6blmku?jobsource=index_s_ac" class="btn" target="_blank">
+                    <i class="fas fa-briefcase"></i> 104 Career Page
+                </a>
+                
+                <a href="https://www.youtube.com/@TT_Classroom" class="btn" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube Channel
+                </a>
             </div>
         </div>
     </section>
@@ -329,16 +348,16 @@
     </footer>
 
     <script>
-        // 平滑捲動
+        // 平滑捲動功能
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
 </body>
-
 </html>
