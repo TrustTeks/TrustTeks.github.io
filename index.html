@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustTeks | Leading Semiconductor IC Design Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 基礎變數與重設 */
+        :root {
+            --primary-red: #E20612;
+            --tech-gray: #333333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--tech-gray);
+            background-color: var(--white);
+        }
+
+        /* 導覽列 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--tech-gray);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--tech-gray);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-red);
+        }
+
+        /* Hero 區塊 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: var(--primary-red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: #b3050e;
+            transform: translateY(-3px);
+        }
+
+        /* 通用區塊樣式 */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--tech-gray);
+            margin-bottom: 10px;
+        }
+
+        .section-title .underline {
+            width: 60px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 0 auto;
+        }
+
+        /* 關於我們 */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        /* 服務項目 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-red);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        /* 聯絡我們 */
+        .contact {
+            background: var(--tech-gray);
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info div {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+
+        /* 頁尾 */
+        footer {
+            background: #222;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .about-content { flex-direction: column; }
+            .contact-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="LOGO.png" alt="TrustTeks Logo" style="height: 50px;">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Engineering the Future of Silicon</h1>
+        <p>Premium Semiconductor IC Design Services. Expertly crafted in Taiwan, serving the Global Innovation Hubs in the USA.</p>
+        <a href="#contact" class="btn">Partner With Us</a>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>Who We Are</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>TrustTeks (毅誠電子)</h3>
+                <p>Located in the heart of Taiwan's semiconductor world, Hsinchu, TrustTeks is a specialized IC design service provider. We bridge complex architectural concepts with high-performance silicon reality.</p>
+                <br>
+                <p>Our team focuses on delivering reliable, scalable, and cutting-edge design solutions for clients in the United States, ensuring that your next-generation products hit the market with precision and excellence.</p>
+            </div>
+            <div class="about-text" style="background: var(--light-gray); padding: 30px; border-radius: 10px;">
+                <p><strong>Integrity. Innovation. Excellence.</strong></p>
+                <p>We pride ourselves on our "Trust" based approach, ensuring long-term partnerships with silicon valley leaders and emerging tech pioneers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #fafafa;">
+        <div class="section-title">
+            <h2>Our Core Expertise</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-microchip"></i>
+                <h3>IC Design Service</h3>
+                <p>Comprehensive RTL-to-Netlist solutions tailored for high-performance computing and consumer electronics.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Design Optimization</h3>
+                <p>Advanced design services focusing on power, performance, and area (PPA) optimization.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Verification</h3>
+                <p>Rigorous verification methodologies to ensure first-pass silicon success for complex SOCs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2 style="color: white;">Get In Touch</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p style="margin-bottom: 30px;">Ready to start your next semiconductor project? Reach out to our expert team today.</p>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>trustteks_yt@trustteks.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+88635752096">+886-3-5752096</a>
+                </div>
+                <div>
+                    <i class="fas fa-globe"></i>
+                    <span>www.trustteks.com</span>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>7F-1. No. 120, Sec. 2, Gongdao 5th Rd., East Dist., Hsinchu City 300, Taiwan</span>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <p>Connect with us on LinkedIn for the latest updates and industry insights.</p>
+                <br>
+                <a href="https://tw.linkedin.com/company/trustteks" class="btn" target="_blank">View LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TrustTeks (毅誠電子). All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // 平滑捲動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
