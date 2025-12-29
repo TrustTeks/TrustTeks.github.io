@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustTeks | Leading Semiconductor IC Design Services</title>
+    <title>毅誠電子 TrustTeks | 領先的半導體 IC 設計服務</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
-        /* 基礎變數與重設 */
         :root {
             --primary-red: #E20612;
             --tech-gray: #333333;
@@ -19,7 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
         }
 
         body {
@@ -28,7 +27,6 @@
             background-color: var(--white);
         }
 
-        /* 導覽列 */
         nav {
             position: fixed;
             top: 0;
@@ -62,7 +60,6 @@
             color: var(--primary-red);
         }
 
-        /* Hero 區塊 */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
@@ -79,7 +76,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .hero p {
@@ -89,7 +86,6 @@
             opacity: 0.9;
         }
 
-        /* 按鈕樣式 */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -103,7 +99,6 @@
             min-width: 250px;
             text-align: center;
             border: none;
-            cursor: pointer;
         }
 
         .btn:hover {
@@ -112,11 +107,6 @@
             color: var(--white);
         }
 
-        .btn i {
-            margin-right: 10px;
-        }
-
-        /* 通用區塊樣式 */
         section {
             padding: 100px 10%;
         }
@@ -139,23 +129,20 @@
             margin: 0 auto;
         }
 
-        /* 關於我們 */
         .about-content {
             display: flex;
             align-items: center;
             gap: 50px;
         }
 
-        .about-text {
-            flex: 1;
-        }
+        .about-text { flex: 1; }
 
         .about-text h3 {
             color: var(--primary-red);
             margin-bottom: 15px;
+            font-size: 1.8rem;
         }
 
-        /* 服務項目 */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -182,7 +169,6 @@
             margin-bottom: 20px;
         }
 
-        /* 聯絡我們 */
         .contact {
             background: var(--tech-gray);
             color: var(--white);
@@ -194,9 +180,7 @@
             gap: 50px;
         }
 
-        .contact-info {
-            flex: 1;
-        }
+        .contact-info { flex: 1; }
 
         .contact-info div {
             margin-bottom: 20px;
@@ -212,12 +196,6 @@
             text-align: center;
         }
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-        }
-
-        /* 頁尾 */
         footer {
             background: #222;
             color: #888;
@@ -226,7 +204,6 @@
             font-size: 0.9rem;
         }
 
-        /* 響應式調整 */
         @media (max-width: 768px) {
             nav ul { display: none; }
             .hero h1 { font-size: 2.5rem; }
@@ -241,72 +218,72 @@
     <nav>
         <img src="LOGO.png" alt="TrustTeks Logo" style="height: 50px;">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="index_tw.html" style="color: var(--primary-red); font-weight: bold;">繁中</a></li>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#services">服務項目</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+            <li><a href="index.html" style="color: var(--primary-red); font-weight: bold;">EN</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
-        <h1>Engineering the Future of Silicon</h1>
-        <p>Premium Semiconductor IC Design Services. Expertly crafted in Taiwan, serving the Global Innovation Hubs in the USA.</p>
-        <a href="#contact" class="btn" style="min-width: auto;">Partner With Us</a>
+        <h1>驅動矽智財的未來</h1>
+        <p>專業半導體 IC 設計服務。深耕台灣技術，服務全球技術核心。</p>
+        <a href="#contact" class="btn" style="min-width: auto;">與我們合作</a>
     </section>
 
     <section id="about">
         <div class="section-title">
-            <h2>Who We Are</h2>
+            <h2>企業簡介</h2>
             <div class="underline"></div>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>TrustTeks (毅誠電子)</h3>
-                <p>Located in the heart of Taiwan's semiconductor world, Hsinchu, TrustTeks is a specialized IC design service provider. We bridge complex architectural concepts with high-performance silicon reality.</p>
+                <h3>毅誠電子 (TrustTeks)</h3>
+                <p>位於台灣半導體重鎮-新竹，毅誠電子是一家專注於積體電路（IC）設計服務的供應商。我們致力於將複雜的架構概念轉化為高性能的實體晶片方案。</p>
                 <br>
-                <p>Our team focuses on delivering reliable, scalable, and cutting-edge design solutions for clients in the United States, ensuring that your next-generation products hit the market with precision and excellence.</p>
+                <p>我們的團隊專注於為美國及全球客戶提供可靠、具擴展性且頂尖的設計服務，確保您的下一代產品能精準且優越地推向市場。</p>
             </div>
             <div class="about-text" style="background: var(--light-gray); padding: 30px; border-radius: 10px;">
-                <p><strong>Integrity. Innovation. Excellence.</strong></p>
-                <p>We pride ourselves on our "Trust" based approach, ensuring long-term partnerships with silicon valley leaders and emerging tech pioneers.</p>
+                <p><strong>誠信、創新、卓越</strong></p>
+                <p>我們以「信任 (Trust)」為核心，確保與矽谷領先企業及新興科技先驅建立長期的合作夥伴關係。</p>
             </div>
         </div>
     </section>
 
     <section id="services" style="background-color: #fafafa;">
         <div class="section-title">
-            <h2>Our Core Expertise</h2>
+            <h2>核心專業</h2>
             <div class="underline"></div>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <i class="fas fa-microchip"></i>
-                <h3>IC Design Service</h3>
-                <p>Comprehensive RTL-to-Netlist solutions tailored for high-performance computing and consumer electronics.</p>
+                <h3>IC 設計服務</h3>
+                <p>提供針對高效能運算與消費性電子產品的全方位 RTL-to-Netlist 解決方案。</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-layer-group"></i>
-                <h3>Design Optimization</h3>
-                <p>Advanced design services focusing on power, performance, and area (PPA) optimization.</p>
+                <h3>設計優化</h3>
+                <p>專業的物理設計服務，專注於功耗、性能與面積（PPA）的極致優化。</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-shield-halved"></i>
-                <h3>Verification</h3>
-                <p>Rigorous verification methodologies to ensure first-pass silicon success for complex SOCs.</p>
+                <h3>設計驗證</h3>
+                <p>嚴謹的驗證流程，確保複雜 SOC 能達成首發晶片成功（First-pass Success）。</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="section-title">
-            <h2 style="color: white;">Get In Touch</h2>
+            <h2 style="color: white;">聯絡我們</h2>
             <div class="underline"></div>
         </div>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p style="margin-bottom: 30px;">Ready to start your next semiconductor project? Reach out to our expert team today.</p>
+                <h3>聯繫資訊</h3>
+                <p style="margin-bottom: 30px;">準備好開始您的下一個半導體專案了嗎？立即聯繫我們的專家團隊。</p>
                 <div>
                     <i class="fas fa-envelope"></i>
                     <span>trustteks_yt@trustteks.com</span>
@@ -321,24 +298,24 @@
                 </div>
                 <div>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>7F-1. No. 120, Sec. 2, Gongdao 5th Rd., East Dist., Hsinchu City 300, Taiwan</span>
+                    <span>300 新竹市東區公道五路二段 120 號 7 樓之 1</span>
                 </div>
             </div>
             
             <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
-                <h3>Connect & Careers</h3>
-                <p style="margin-bottom: 20px;">Stay updated with our latest news and join our growing team.</p>
+                <h3>社群與徵才</h3>
+                <p style="margin-bottom: 20px;">關注最新消息或加入我們成長中的團隊。</p>
                 
                 <a href="https://tw.linkedin.com/company/trustteks" class="btn" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    <i class="fab fa-linkedin"></i> LinkedIn 專頁
                 </a>
                 
                 <a href="https://www.104.com.tw/company/1a2x6blmku?jobsource=index_s_ac" class="btn" target="_blank">
-                    <i class="fas fa-briefcase"></i> 104 Career Page
+                    <i class="fas fa-briefcase"></i> 104 人力銀行招募
                 </a>
                 
                 <a href="https://www.youtube.com/@TT_Classroom" class="btn" target="_blank">
-                    <i class="fab fa-youtube"></i> YouTube Channel
+                    <i class="fab fa-youtube"></i> YouTube 頻道 (TT_Classroom)
                 </a>
             </div>
         </div>
@@ -349,7 +326,6 @@
     </footer>
 
     <script>
-        // 平滑捲動功能
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
